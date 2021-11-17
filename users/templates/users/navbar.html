@@ -42,28 +42,25 @@
         <div class="collapse navbar-collapse" id="navbarNav" >
           <ul class="navbar-nav ml-auto" >
             <li class="nav-item ">
-              <a class="nav-link" href="" style="color: white;margin-right:10px;">Home </a>
+              <a class="nav-link" href="{% url 'home' %}" style="color: white;margin-right:10px;">Home </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="" style="color: white;margin-right:10px;">Drives</a>
+                <a class="nav-link" href="" style="color: white;margin-right:10px;">Earn Badges!</a>
               </li>
               {% if not user.is_authenticated %}
             <li> 
-                <a class="nav-link"  style="color: white;margin-right:10px;" onclick="document.getElementById('id01').style.display='block'">login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="" style="color: white;margin-right:10px;">Signup</a>
+                <a class="nav-link" href="{% url 'LS' %}" style="color: white;margin-right:10px;" >login</a>
             </li>
             {% else %}
             <li class="nav-item">
-              <a class="nav-link" href="" style="color: white;margin-right:10px;">Profile</a>
+              <a class="nav-link" href="{% url 'profile' %}" style="color: white;margin-right:10px;">Profile</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="" style="color: white;margin-right:10px;">Logout</a>
+                <a class="nav-link" href="{% url 'logout' %}" style="color: white;margin-right:10px;">Logout</a>
               </li>
               {% endif %}
             <li class="nav-item">
-                <a class="nav-link" href="" style="color: white;margin-right:10px;">Our team</a>
+                <a class="nav-link" href="{% url 'about' %}" style="color: white;margin-right:10px;">Our team</a>
               </li>
           </ul>
         </div>
