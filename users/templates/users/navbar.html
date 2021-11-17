@@ -1,0 +1,79 @@
+<style>
+        nav {
+        background: black;
+        font-family: sans-serif;
+    }
+         .navbar-brand {
+        color: aqua;
+        font-size: 35px;
+        margin-right: 0px;
+        font-weight: bold;
+    }
+        nav ul li a {
+        position: relative;
+        color: white;
+        padding: 5px 0;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+    }
+    nav ul li a::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 100%;
+        background: white;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .4s linear;
+    }
+    nav ul li a:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    </style>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <a class="navbar-brand" style="color: rgb(255, 0, 0);">Leuke<a class="navbar-brand" style="color: white;">Aware</a></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" >
+          <ul class="navbar-nav ml-auto" >
+            <li class="nav-item ">
+              <a class="nav-link" href="" style="color: white;margin-right:10px;">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="" style="color: white;margin-right:10px;">Drives</a>
+              </li>
+              {% if not user.is_authenticated %}
+            <li> 
+                <a class="nav-link"  style="color: white;margin-right:10px;" onclick="document.getElementById('id01').style.display='block'">login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="" style="color: white;margin-right:10px;">Signup</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="" style="color: white;margin-right:10px;">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="" style="color: white;margin-right:10px;">Logout</a>
+              </li>
+              {% endif %}
+            <li class="nav-item">
+                <a class="nav-link" href="" style="color: white;margin-right:10px;">Our team</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+  
+{% for message in messages %}
+  
+{% endfor %}
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

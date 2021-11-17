@@ -13,7 +13,8 @@ from django.http import JsonResponse
 # Create your views here.
 
 
-
+def home(request):
+    return render(request, 'users/home.html')
 
 def login(request):
     if request.method == 'POST':
@@ -25,7 +26,8 @@ def login(request):
             # return render(request,'users/result.html')
         
         else:
-             return render(request, 'users/LS.html',{ 'error': "invalid login credentials"})
+            messages.error(request, "invalid login credentials")
+            return redirect("LS")
     else:
         return render(request,'users/LS.html')
 
@@ -77,3 +79,4 @@ def signup(request):
 
 def LS(request):
     return render(request, "users/LS.html")
+
