@@ -29,18 +29,20 @@ def home(request):
 
 def login(request):
     if request.method == 'POST':
-        
         user = auth.authenticate( username =request.POST['email'], password=request.POST['password1'])
         if user is not None:
             auth.login(request,user)
-            return render(request,'users/result.html')
+            prof = Profile.objects.get(user= user)
+            if prof.is_blood_bank:
+                return(redirect("blood-bank"))
+            return redirect("home")
             # return render(request,'users/result.html')
         
         else:
             messages.error(request, "invalid login credentials")
             return redirect("LS")
     else:
-        return render(request,'users/LS.html')
+        return redirect("LS")
 
 
 
@@ -113,11 +115,9 @@ def LS(request):
 def about(request):
     pass
 
-def tasks(request):
-    pass
 
-def profile(request):
-    pass
+
+
 
 def logout(request):
     auth.logout(request)
@@ -192,7 +192,10 @@ def profile(request):
 def editprofile(request):
     context = {}
     
-    edit = extendeduser.objects.get(user=request.user)
+    try:
+        edit = extendeduser.objects.get(user=request.user)
+    except:
+        edit = None
     context["edit"]=edit
 
 
@@ -228,3 +231,50 @@ def blog(request):
 
 def about(request):
     return render(request, "users/About.html")    
+
+def blood_bank(request):
+    profiles = extendeduser.objects.all()
+    context = {'profiles':profiles} 
+    return render(request, 'users/bloodbank.html', context)
+
+
+#################################################################################
+from django.views.generic.base import TemplateView
+
+class ExcelPageView(TemplateView):
+    template_name = "result.html"
+
+import xlwt
+from django.http import HttpResponse
+from django.contrib.auth.models import User
+
+def export_users_xls(request):
+    response = HttpResponse(content_type='application/ms-excel')
+    response['Content-Disposition'] = 'attachment; filename="users.xls"'
+
+    wb = xlwt.Workbook(encoding='utf-8')
+    ws = wb.add_sheet('Users Data') # this will make a sheet named Users Data
+
+    # Sheet header, first row
+    row_num = 0
+
+    font_style = xlwt.XFStyle()
+    font_style.font.bold = True
+
+    columns = [ 'First Name', 'Gender','Age', 'bloodgroup' ,'Email Address', 'phone number' 'Address' ]
+
+    for col_num in range(len(columns)):
+        ws.write(row_num, col_num, columns[col_num], font_style) # at 0 row 0 column 
+
+    # Sheet body, remaining rows
+    font_style = xlwt.XFStyle()
+
+    rows = extendeduser.objects.all().values_list('user', 'gender', 'age' ,'bldgrp','id', 'number','address'  )
+    for row in rows:
+        row_num += 1
+        for col_num in range(len(row)):
+            ws.write(row_num, col_num, row[col_num], font_style)
+
+    wb.save(response)
+
+    return response

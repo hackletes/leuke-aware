@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/416ace7998.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/bloodbank.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Blood Donors Data-Base</h1>
+
+        <table class="rwd-table">
+            <tbody>
+                <tr>
+                    <th>sr no.</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Adress</th>
+                    <th>Blood group</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    
+                </tr>
+                {% for profile in profiles %}
+                <tr>
+                    <td data-th="sr no.">
+                        {{ forloop.counter }}
+                    </td>
+                    <td data-th="Supplier username">
+                        {{profile.user.first_name}}
+                    </td>
+                    <td data-th="Supplier Email">
+                        {{profile.user.email}}
+                    </td>
+                    <td data-th="Phone Number">
+                        {{profile.number}}
+                    </td>
+                    <td data-th="Adress">
+                        {{profile.address}}
+                    </td>
+                    <td data-th="Blood group">
+                        {{profile.bldgrp}}
+                    </td>
+                    <td data-th="Gender">
+                        {{profile.gender}}
+                    </td>
+                    <td data-th="Age">
+                        {{profile.age}}
+                    </td>
+                    
+                </tr>
+                {% endfor %}
+
+
+           
+
+            </tbody>
+        </table><br>
+        <a style="border:2px solid black; text-decoration: none; padding: 12px; background-color: rgb(79, 102, 207); color: black; border-radius: 10px;" href="{% url 'export_excel' %}"><i class="fas fa-download"></i> Download excel sheet</a>
+    </div>
+</body>
+
+</html>

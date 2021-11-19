@@ -29,12 +29,12 @@
 </head>
 <body>
 
-    {% include 'users/navbar.html' %}
+    <!--  'users/navbar.html' -->
     
     <div class="login">
         <div class="login__content">
             <div class="login__img">
-                <!-- <img src="../assets/img/LS__Svg.ai" alt=""> -->
+                <img src="{% static 'About/blood-donation-animate.svg' %}" alt="">
             </div>
 
             <div class="login__forms">
@@ -60,7 +60,7 @@
 
                     <!-- <a href="#" class="login__forgot">Forgot password?</a> -->
 
-                    <button class="login__button" name="submit" type="submit" style="color: rgb(0, 0, 0);">Sign In</button>
+                    <button class="login__button" name="submit" type="submit" style="color: rgb(0, 0, 0); width:100%; border-radius:50px">Sign In</button>
 
                     <div>
                         <span class="login__account">Don't have an Account ?</span>
