@@ -9,7 +9,7 @@ from django.db.models import Q
 import re
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
-
+from django.core.mail import send_mail
 
 # Create your views here.
 
@@ -53,6 +53,7 @@ def signup(request):
                 try:
                     user = User.objects.get(email=request.POST['email'])
                     messages.error(request,'email already exist')
+                    return redirect('LS')
                     # return render(request, 'users/LS.html', {'error': "username already exist"})
 
                 except User.DoesNotExist:
@@ -91,6 +92,13 @@ def signup(request):
                             current_user_profile.recommended_by = recommending_user
                             current_user_profile.save()
                         auth.login(request, user)
+                        send_mail(
+                                    'thanku',
+                                    'signup succesfull',
+                                    'leukeaware@gmail.com',
+                                    ['{}'.format(user.email)],
+                                    fail_silently=False,
+                                )
 
                         return redirect(LS)
             else:
@@ -136,6 +144,13 @@ def Donars(request):
             newextendeduser.save()
             messages.success(
                         request, f'Your data is saved')
+            send_mail(
+                        'thanku',
+                        'you are a donor know',
+                        'leukeaware@gmail.com',
+                        ['{}'.format(request.user.email)],
+                        fail_silently=False,
+                )
             return render(request, "users/DR.html")
         else:
             return render(request,'users/DR.html')
@@ -153,6 +168,14 @@ def reciver(request):
             newReciver.save()
             messages.success(
                         request, f'Your data is saved')
+            maildraft = f'we need bloodgroup {bldgrp } on urgent basis for{request.user.first_name} {gender} with age {age} email id {request.user.email } and address {address}'
+            send_mail(
+                        'thanku',
+                        maildraft,
+                        'leukeaware@gmail.com',
+                        ['neerajbuakne@gmail.com' , 'sarveshvarade873@gmail.com' , 'nikitakarande27@gmail.com' ,'devrajshetake@gmail.com'],
+                        fail_silently=False,
+                )
             return render(request, "users/DR.html")
         else:
             return render(request,'users/DR.html')

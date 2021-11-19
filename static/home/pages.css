@@ -18,7 +18,7 @@
 }
 
 html{
-    /* font-size: 50.5%; */
+  font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
@@ -40,7 +40,6 @@ html::-webkit-scrollbar-thumb{
 body{
     background: whitesmoke;
 }
-
 section{
     padding:2rem 7%;
 }

@@ -1,0 +1,22 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+
+<h1>tasks</h1>
+<p id="demo"></p>
+<div class="progress">
+    <div class="progress-bar bg-success" role="progressbar" style="width:40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{rec_count}}/5</div>
+  </div>
+
+  {% include 'tasks/share.html' %}
+
+<script>
+    let current_url =  window.location.href;
+
+    referral_link = current_url.slice(0, current_url.length - 6 ) + "referral/" + "{{ref_code}}";
+    document.getElementById("demo").innerHTML = referral_link;
+    console.log(current_url);
+
+</script>
+
+{% endblock content %}

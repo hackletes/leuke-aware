@@ -169,6 +169,7 @@ button:hover
     width: 50px;
     color: #fff;
     text-align: center;
+    text-decoration: none;
     margin: 0 5px;
     line-height: 38px;
     justify-content: center;
@@ -339,6 +340,7 @@ footer {
     line-height: 35px;
     margin-right: 3px;
     margin-bottom: 5px;
+    text-decoration: none;
 }
 
 .footer-distributed .footer-icons a:hover {
