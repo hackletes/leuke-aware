@@ -114,3 +114,94 @@ def profile(request):
 def logout(request):
     auth.logout(request)
     return redirect("home")
+
+def chatbot(request):
+    return render(request, 'users/chatbot.html')
+
+
+@login_required(login_url='login')
+def DR(request):
+            return render(request,'users/DR.html')
+
+def Donars(request):
+        if request.method == 'POST':
+        
+            number = request.POST['number']
+            gender=request.POST['gender']
+            age=request.POST['age']
+            bldgrp=request.POST['bldgrp']
+            address=request.POST['address']
+
+            newextendeduser = extendeduser( number=number, gender=gender, age=age ,bldgrp=bldgrp, address= address, user=request.user)
+            newextendeduser.save()
+            messages.success(
+                        request, f'Your data is saved')
+            return render(request, "users/DR.html")
+        else:
+            return render(request,'users/DR.html')
+
+def reciver(request):
+        if request.method == 'POST':
+        
+            number = request.POST['number']
+            gender=request.POST['gender']
+            age=request.POST['age']
+            bldgrp=request.POST['bldgrp']
+            address=request.POST['address']
+
+            newReciver = Reciver(  user=request.user ,number=number, gender=gender, age=age ,bldgrp=bldgrp, address= address)
+            newReciver.save()
+            messages.success(
+                        request, f'Your data is saved')
+            return render(request, "users/DR.html")
+        else:
+            return render(request,'users/DR.html')
+
+def dkms(request):
+    return render(request, "users/dkms.html")
+
+@login_required(login_url='login')
+def profile(request):
+    datas = extendeduser.objects.filter(user = request.user)
+    return render(request,'users/profile.html',{'data':datas})
+
+@login_required(login_url='login')
+def editprofile(request):
+    context = {}
+    
+    edit = extendeduser.objects.get(user=request.user)
+    context["edit"]=edit
+
+
+
+    if request.method=="POST":
+        number = request.POST['number']
+        gender=request.POST['gender']
+        age=request.POST['age']
+        bldgrp=request.POST['bldgrp']
+        address=request.POST['address']
+
+
+
+        edit.number = number
+        edit.gender = gender
+        edit.age = age
+        edit.bldgrp = bldgrp
+        edit.address = address
+        edit.save()
+
+
+
+        context["status"] = "Changes Saved Successfully"
+        return redirect(profile)
+    return render(request,'users/editprofile.html' ,context)
+
+
+
+
+def blog(request):
+    return render(request, "users/Blog.html")
+
+
+def about(request):
+    return render(request, "users/About.html")    

@@ -1,0 +1,99 @@
+! version = 2.0
+
+// Substitutions
+! sub i'm     = i am
+! sub i'd     = i would
+! sub i've    = i have
+! sub i'll    = i will
+! sub don't   = do not
+! sub isn't   = is not
+! sub you'd   = you would
+! sub you're  = you are
+! sub you've  = you have
+! sub you'll  = you will
+! sub what's  = what is
+! sub whats   = what is
+! sub what're = what are
+! sub what've = what have
+! sub what'll = what will
+! sub who's   = who is
+
+
+> begin
+
+  // If we don't know their name, set the new_user topic and continue.
+  + request
+  * <get met> == undefined => <set met=true>{topic=asked_name}{ok}
+  - {ok}
+
+< begin
+
+
+
+
+
++ thank you
+- you are welcome
+- welcome
+- no problem
+- no worries
+
+
+
+> topic asked_name
+  + (hi|hello|hey)[*]
+  - Hi again!! Can I have your name please.
+  - hello, what is your name?
+  - Hey there!! May I know your name??
+  - Hi!! I am a bot!! Who are you?
+
+  + #
+  - Your name is a number?
+
+  + *
+  - I only want your first name.
+  - Just the first name is fine.
+
+  + _ 
+  - <set name=<formal>>Nice to meet you, <get name>!{topic=website}
+
+< topic
+
+> topic website
+
+  + *
+  - I can help your spread awareness regarding blood cancer.\n
+  ^ Try asking me about Blood Cancer, HLA Typing, Stem Cell Donation.
+
+  + [*] (hla|typing) [*]
+  - HLA typing is a kind of genetic test used to identify certain individual variations in a person's immune system.{topic=hla}
+  - Human Leukocyte Antigen. HLA typing of two people should match in order to donate stem cells.{topic=hla}
+
+
+< topic
+
+< topic hla
+
+  + [*] (hla|typing) [*]
+  - HLA typing is a kind of genetic test used to identify certain individual variations in a person's immune system.
+  - Human Leukocyte Antigen. HLA typing of two people should match in order to donate stem cells.
+
+  + [*] (more|tell|info) [*]
+  - 1 in 10000 people share same HLA typing.
+  - Human Leukocyte Antigen. HLA typing of two people should match in order to donate stem cells.
+  - HLA typing can be determined by a swab test.
+
+  + *
+  - Try asking me about Stem cell donation process. {topic=stem_cell}
+  - Try asking me about DKMS. {topic=dkms}
+  - Try asking me about blood donation process. {topic=blood_donation}
+  - Try asking me "How can I earn badges?" {topic=badges}
+
+> topic
+
+
++ *
+- Sorry did not get what you said
+- I am afraid that i can not understand you
+- I did not get it
+- Sorry can you please elaborate that for me

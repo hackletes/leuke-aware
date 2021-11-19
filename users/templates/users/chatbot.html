@@ -1,0 +1,133 @@
+{% load static %}
+
+
+
+<link rel="stylesheet" href="{% static 'chatbot/css/chat.css' %}">
+<link rel="stylesheet" href="{% static 'chatbot/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'chatbot/css/voice.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/64c6f68e46.js" crossorigin="anonymous"></script>
+
+
+<!-- CHAT BAR BLOCK -->
+<div class="chat-bar-collapsible" style="z-index: 1;">
+    <button id="chat-button" type="button" class="collapsible" style="background-color:rgb(55, 40, 221);border:none">
+        <div class="text-left">
+            Ask your questions here!!
+            <!-- <i id ="chat-icon" class='fas fa-comments' style='font-size:22px;'></i> -->
+            <!-- <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i> -->
+        </div>
+    </button>
+
+    <div class="content">
+        <div class="full-chat-block">
+            <!-- Message Container -->
+            <div class="outer-container">
+                <div class="chat-container">
+                    <!-- Messages -->
+                    <div id="chatbox">
+                        <h4 id="chat-timestamp"></h4><br>
+                        <p id="botStarterMessage" class="botText">
+                        <section class="main">
+                            <div class="chatarea-main">
+                                <div class="chatarea-outer"></div>
+                            </div>
+                        </section>
+                    </div>
+                    <br>
+                    <!-- User input box -->
+                    <div class="chat-bar-input-block">
+                        <div id="userInput">
+                            <input id="textInput" class="input-box" type="text" name="msg"
+                                placeholder="Tap 'Enter' to send a message">
+                            <p></p>
+                        </div>
+
+                        <div class="chat-bar-icons">
+                            <button id="mic" class="mic-icon"><i class="fa fa-fw fa-microphone"></i></button>
+                            <!-- <i id="chat-icon" style="color: rgb(250, 2, 52);" class="fa fa-fw fa-thumbs-up"
+                                    onclick="thumbsupButton()"></i> -->
+                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                        </div>
+                    </div>
+
+                    <div id="chat-bar-bottom">
+                        <p></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="{% static 'chatbot/main.js' %}"></script>
+<!-- <script src="{% static 'chatbot/voice.js' %}"></script> -->
+<script src="{% static 'chatbot/intents.js' %}"></script>
+<script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
+
+<script>
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+    const speech = new SpeechSynthesisUtterance();
+
+    message_container = document.getElementById("chatbox")
+
+    let bot = new RiveScript();
+
+    const brains = [
+        'https://gist.githubusercontent.com/devrajshetake/4afbfc55a74ea3d3b3efc0e057312a88/raw/0c3a2692f07a3edddbd6bf8fa2cd59f544ba89d4/brain.rive'
+    ];
+
+    bot.loadFile(brains).then(botReady).catch(botNotReady);
+
+    function botReply(message) {
+        message_container.innerHTML += `<p class="botText"><span> ${message} </span></p>`;
+        //  location.href = '#edge';
+    }
+
+    function selfReply(message) {
+        //  message_container.innerHTML += `<p class="userText"><span> ${message} </span></p>`;
+        //  location.href = '#edge';
+
+        bot.reply('local-user', message).then(function (reply) {
+            if (micUsed) {
+                speech.text = reply
+                window.speechSynthesis.speak(speech);
+                micUsed = false;
+            }
+            botReply(reply);
+        });
+    }
+
+    function botReady() {
+        bot.sortReplies();
+        botReply('Hi! I\'m Leuke-Bot! What is your name?');
+    }
+    function botNotReady(err) {
+        console.log("An error has occurred.", err);
+    }
+
+    let micUsed = false;
+    recognition.onresult = function (e) {
+        let resultIndex = e.resultIndex;
+        let transcript = e.results[resultIndex][0].transcript;
+        micUsed = true;
+        console.log(transcript);
+        buttonSendText(transcript)
+        selfReply(transcript)
+    }
+    recognition.onend = function () {
+        mic.style.background = "#ff3b3b";
+    }
+    mic.addEventListener("click", function () {
+        mic.style.background = '#39c81f';
+        recognition.start();
+        console.log("Activated");
+    })
+</script>

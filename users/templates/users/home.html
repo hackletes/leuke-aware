@@ -4,47 +4,52 @@
 
 {% block header %}
 
-    <link rel="stylesheet" href="{% static 'home/home.css' %}">
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+<link rel="stylesheet" href="{% static 'home/home.css' %}">
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 
 {% endblock header %}
 
 {% block content %}
 <div class="container-fluid p-0">
     <div id="carousel" class="carousel slide hero-slides" data-ride="carousel">
-      <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active boat">
-            <section class="home" id="home">
-                <div class="max-width">
-                    <div class="home-content">
-                        <div class="text-1">Hello! Welcome to</div>
-                        <div class="text-2">LeukeAware</div>
-                        <div class="text-3">Do you <span class="typing"></span></div>
-                        <div class="text-1">then you are at right place!!</div>
-                        <a href="" target="blank">Read more</a><br>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active boat">
+                <section class="home" id="home">
+                    <div class="max-width">
+                        <div class="home-content" style="margin-top: -30px;">
+                            <div class="text-1">Hello! Welcome to</div>
+                            <div class="text-2">LeukeAware</div>
+                            <div class="text-3">Do you <span class="typing"></span></div>
+                            <div class="text-1">then you are at right place!!</div>
+                            <a href="{% url 'dkms' %}" >Read more</a><br>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
     </div>
-</div>
 
-<style>
-    .home{
-    display: flex;
-    background: url("{% static 'home/doctor.jpg' %}") no-repeat center;
-    height: 100vh;
-    color: rgb(5, 5, 5);
-    min-height: 500px;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Ubuntu', sans-serif;
-}
-</style>
+
+
+
+    <style>
+        .home {
+            display: flex;
+            background: url("{% static 'home/doctor.jpg' %}") no-repeat center;
+            height: 100vh;
+            color: rgb(5, 5, 5);
+            min-height: 500px;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Ubuntu', sans-serif;
+        }
+    </style>
 
 
     <script src="{% static 'home/home.js' %}"></script>
+    {% include 'users/chatbot.html' %}
 
-{% endblock content %}
+
+    {% endblock content %}

@@ -28,6 +28,8 @@
     
 </head>
 <body>
+
+    {% include 'users/navbar.html' %}
     
     <div class="login">
         <div class="login__content">
@@ -104,7 +106,7 @@
                         <input type="password" placeholder=" Confirm Password" class="login__input" name="password2" id="password2" onkeyup="checkPasswordMatch();"  , required>
                     </div>
 
-                    <button  class="login__button" name="submit" type="submit">Sign Up</button>
+                    <button  class="login__button" name="submit" type="submit" style="width:100%;border-radius:20px">Sign Up</button>
 
                     <div>
                         <span class="login__account">Already have an Account ?</span>

@@ -1,0 +1,137 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block header %}
+
+
+<link rel="stylesheet" href="{% static 'home/pages.css' %}">
+
+{% endblock header %}
+
+{% block content %}
+
+<section class="about1" id="about1">
+
+    <h1 class="heading"> <span>DKMS</span> - We Delete Blood Cancer </h1>
+
+    <div class="row">
+
+        <div class="image" style="margin-left: 20px;">
+            <img src="DKMS.webp" alt="">
+        </div>
+
+        <div class="content">
+            <h3>Lets know about DKMS!!!</h3>
+            <p>DKMS is an international nonprofit bone marrow donor center based in Tübingen, Germany, with entities
+                in the US, UK, Chile, Poland, India and South Africa.<br>
+                They provide blood cancer patients with a second chance at life. The vision of DKMS is to fight
+                blood cancer. That's why they are constantly working to convince as many people as possible to join
+                the blood stem cell register.
+                They also support patients from day one of their diagnosis, providing family and friends with a
+                positive way to get involved by organising bone marrow donor drives that can enhance your donor
+                search, rally community support and provide hope.</p>
+            <a href="https://www.dkms-bmst.org/" class="btn">Read more</a>
+        </div>
+
+    </div>
+
+    <div class="box-container row">
+        <div class="box-item col-md-6">
+            <div class="flip-box">
+                <div class="flip-box-front text-center" style="background-image: url('hla.jpg');">
+                    <div class="inner color-black">
+                        <h3 style="color: black;font-weight: bolder;" class="flip-box-header"> HLA typing
+                        </h3>
+                        <p style="color: black;font-weight: bolder;"></p>
+                        <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img">
+                    </div>
+                </div>
+                <div class="flip-box-back text-center" style="background-color: white;">
+                    <div class="inner color-black">
+                        <h3 style="color: black;font-weight: bolder;" class="flip-box-header">HLA typing</h3>
+                        <p style="color:black;font-weight: bolder;">HLA typing is a kind of genetic test used to
+                            identify certain individual variations in a person's immune system
+                        </p>
+                        <button class="flip-box-button" style="color: black; border: black solid;">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-item col-md-6">
+            <div class="flip-box">
+                <div class="flip-box-front text-center" style="background-image: url('stem.jpg');">
+                    <div class="inner color-white">
+                        <h3 style="color: rgb(255, 255, 255);font-weight: bolder;" class="flip-box-header"> stem
+                            cell </h3>
+                        <p style="color: black;font-weight: bolder;"> </p>
+                        <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img">
+                    </div>
+                </div>
+                <div class="flip-box-back text-center" style="background-color: white;">
+                    <div class="inner color-white">
+                        <h3 style="color: black;font-weight: bolder;" class="flip-box-header">Stem cell donation
+                        </h3>
+                        <p style="color: black;font-weight: bolder;">Stem cells are cells with the potential to
+                            develop into
+                            many different types of cells in the body.</p>
+                        <button style="color: black;font-weight: bolder;border: black solid;"
+                            class="flip-box-button">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-item col-md-6">
+            <div class="flip-box">
+                <div class="flip-box-front text-center filter-" style="background-image: url('blood.jpg');">
+                    <div class="inner color-black">
+                        <h3 style="color: black;font-weight: bolder;" class="flip-box-header"> Blood donation
+                        </h3>
+                        <p style="color: black;font-weight: bolder;"></p>
+                        <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img">
+                    </div>
+                </div>
+                <div class="flip-box-back text-center" style="background-color: white;">
+                    <div class="inner color-black">
+                        <h3 style="color: black;font-weight: bolder;" class="flip-box-header">Blood Donation</h3>
+                        <p style="color: black;font-weight: bolder;">It helps save lives. In fact, every two seconds
+                            of every day, someone needs blood so blood donation is really helpful.
+                        </p>
+                        <button class="flip-box-button" style="color: black; border: black solid;">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-item col-md-6">
+            <div class="flip-box">
+                <div class="flip-box-front text-center" style="background-image: url('blood.jpg');">
+                    <div class="inner color-white">
+                        <h3 style="color: black;font-weight: bolder;" class="flip-box-header">Want some task?</h3>
+                        <p style="color: black;font-weight: bolder;"></p>
+                        <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img">
+                    </div>
+                </div>
+                <div class="flip-box-back text-center" style="background-color: white;">
+                    <div class="inner color-white">
+                        <h3 style="color: black;font-weight: bolder;" class="flip-box-header">Earn badges</h3>
+                        <p style="color: black;font-weight: bolder;">There are some exciting tasks here for you
+                            complete it and
+                            win exciting batches</p>
+                        <button style="color: black;font-weight: bolder;border: black solid;"
+                            class="flip-box-button">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="text-align: center; font-size: 40px;font-weight: bold;"> Reference vedioes</p>
+    <br>
+    <div style="display: flex; justify-content: space-around;flex-wrap: wrap;">
+        <iframe width="420" height="345" src="https://www.youtube.com/embed/x2eAa3kOL3Y">
+        </iframe>
+        <iframe class="vedio" width="420" height="345" src="https://www.youtube.com/embed/Elogxi3w9vI">
+        </iframe>
+    </div>
+</section>
+
+
+{% endblock content %}
