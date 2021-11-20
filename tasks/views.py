@@ -15,7 +15,7 @@ def tasks(request):
         donated = 1
     except:
         donated = 0
-    context = {'ref_code': profile.code, 'rec_count': rec_count, 'donated':donated}
+    context = {'ref_code': profile.code, 'rec_count': rec_count, 'donated':donated, 'title':"LeukeAware | Earn Badges!"}
 
     return render(request, 'tasks/tasks.html', context)
 

@@ -25,7 +25,7 @@ def referral(request, *args, **kwargs):
         return redirect("home")
 
 def home(request):
-    return render(request, 'users/home.html')
+    return render(request, 'users/home.html', {'title': 'LeukeAware | Home'})
 
 def login(request):
     if request.method == 'POST':

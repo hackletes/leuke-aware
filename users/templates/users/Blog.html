@@ -1,239 +1,291 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
 
 
-        
 
-    <!-- ===CSS=== -->
-    <link rel="stylesheet" href="{% static 'Blogs/Blog.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
-        
+  <!-- ===CSS=== -->
+  <link rel="stylesheet" href="{% static 'Blogs/Blog.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+
   <!-- ===ICONS=== -->
   <script src="https://kit.fontawesome.com/8d375795c5.js" crossorigin="anonymous"></script>
-  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>  
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
+
 <body>
-    
-    {% include 'users/navbar.html' %}
-    <main>
-  
-       <section class="text-gray-600 body-font">
-        <div class="container px-5 py-14 mx-auto">
-          <div class="flex flex-wrap -m-4">
-            <div class="p-4 md:w-1/3">
-              <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/720x400" alt="blog">
-                <div class="p-6">
-                  <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">AWARENESS</h2>
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Blood cancer awareness Part 1: Symptoms</h1>
-                  <p class="leading-relaxed mb-3">As part of our efforts to raise awareness, we’re writing on our blog about how to spot the signs, what precautions you should take, what treatment is available and advice on life after blood cancer. This week, we’re focusing on the symptoms.</p>
-                  <div class="flex items-center flex-wrap ">
-                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" target = "_blank" href="https://caboodle-technology.co.uk/blog_post/blood-cancer-awareness-month/">Learn More
-                      <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
 
-                  </div>
+  {% include 'users/navbar.html' %}
+  <main>
+
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-14 mx-auto">
+        <div class="flex flex-wrap -m-4">
+          <div class="p-4 md:w-1/3">
+            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <img class="lg:h-48 md:h-36 w-full object-cover object-center"
+                src="https://image.shutterstock.com/shutterstock/photos/1464182393/display_1500/stock-vector-leukemia-symptoms-infographic-concept-dangerous-disease-ways-of-treatment-blood-cancer-red-and-1464182393.jpg"
+                alt="blog">
+              <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">AWARENESS</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Blood cancer awareness Part 1: Symptoms
+                </h1>
+                <p class="leading-relaxed mb-3">As part of our efforts to raise awareness, we’re writing on our blog
+                  about how to spot the signs, what precautions you should take, what treatment is available and advice
+                  on life after blood cancer. This week, we’re focusing on the symptoms.</p>
+                <div class="flex items-center flex-wrap ">
+                  <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" target="_blank"
+                    href="https://caboodle-technology.co.uk/blog_post/blood-cancer-awareness-month/">Learn More
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+
                 </div>
               </div>
             </div>
-            <div class="p-4 md:w-1/3">
-              <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/721x401" alt="blog">
-                <div class="p-6">
-                  <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">AWARENESS</h2>
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Blood cancer awareness Part 2: Treatment</h1>
-                  <p class="leading-relaxed mb-3">In this part we’re going to talk about the treatments available. The treatments available come with varying benefits, side effects and risks. The treatment recommended to you will depend on the type of blood cancer you have, while your doctor will also consider your health and your preferences..</p>
-                  <div class="flex items-center flex-wrap">
-                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" target="_blank" href="https://caboodle-technology.co.uk/blog_post/blood-cancer-treatment/">Learn More
-                      <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
+          </div>
+          <div class="p-4 md:w-1/3">
+            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{% static 'Blogs/part2.png' %}"
+                alt="blog">
+              <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">AWARENESS</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Blood cancer awareness Part 2: Treatment
+                </h1>
+                <p class="leading-relaxed mb-3">In this part we’re going to talk about the treatments available. The
+                  treatments available come with varying benefits, side effects and risks. The treatment recommended to
+                  you will depend on the type of blood cancer you have, while your doctor will also consider your health
+                  and your preferences..</p>
+                <div class="flex items-center flex-wrap">
+                  <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" target="_blank"
+                    href="https://caboodle-technology.co.uk/blog_post/blood-cancer-treatment/">Learn More
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
 
-                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4 md:w-1/3">
-              <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/722x402" alt="blog">
-                <div class="p-6">
-                  <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">AWARENESS</h2>
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Blood cancer awareness Part 3: Dealing with blood cancer</h1>
-                  <p class="leading-relaxed mb-3">In this, the final part we’re talking about dealing with blood cancer and life after blood cancer. Currently, the survival rate for many adults with blood cancers is, still less than 50%. With advancements in treatment available to those with blood cancer in recent years, more and more people are surviving.</p>
-                  <div class="flex items-center flex-wrap ">
-                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" target="_blank" href="https://caboodle-technology.co.uk/blog_post/dealing-blood-cancer/">Learn More
-                      <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
+          </div>
+          <div class="p-4 md:w-1/3">
+            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <img class="lg:h-48 md:h-36 w-full object-cover object-center"
+                src="https://www.oncolifehospitals.com/wp-content/uploads/2019/07/Types-of-Blood-Cancers-and-their-Treatment-Options-by-hematologist-in-Pune.jpg"
+                alt="blog">
+              <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">AWARENESS</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Blood cancer awareness Part 3: Dealing
+                  with blood cancer</h1>
+                <p class="leading-relaxed mb-3">In this, the final part we’re talking about dealing with blood cancer
+                  and life after blood cancer. Currently, the survival rate for many adults with blood cancers is, still
+                  less than 50%. With advancements in treatment available to those with blood cancer in recent years,
+                  more and more people are surviving.</p>
+                <div class="flex items-center flex-wrap ">
+                  <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" target="_blank"
+                    href="https://caboodle-technology.co.uk/blog_post/dealing-blood-cancer/">Learn More
 
-                  </div>
+                  </a>
+
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      
-      <section class="container">
-        <main class="container">
+      </div>
+    </section>
 
-            <div class="row mb-2">
-              <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                  <div class="col p-4 d-flex flex-column position-static">
-                    <strong class="d-inline-block mb-2 text-primary"> Stem Cell Transplant</strong>
-                    <div class="mb-1 text-muted">Dec 12</div>
-                    <p class="card-text mb-auto">In certain people with cancer or other serious diseases, transplants of healthy adult stem cells can be lifesaving. But donating blood-forming stem cells is a bit more complicated than giving blood.
+    <section class="container">
+      <main class="container">
 
-                      </p>
-                    <a target = "_blank" href="https://directorsblog.nih.gov/2017/12/12/helping-people-in-need-of-a-stem-cell-transplant/" class="stretched-link">Continue reading</a>
-                  </div>
-                  <div class="col-auto d-none d-lg-block">
-                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-          
-                  </div>
-                </div>
+        <div class="row mb-2">
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary"> Stem Cell Transplant</strong>
+                <div class="mb-1 text-muted">Dec 12</div>
+                <p class="card-text mb-auto">In certain people with cancer or other serious diseases, transplants of
+                  healthy adult stem cells can be lifesaving. But donating blood-forming stem cells is a bit more
+                  complicated than giving blood.For example, stem-cell donors most often undergo five days of injections
+                  to build up enough of those vital cells in the blood for donation.
+                  <br>
+                  <br>
+
+                </p>
+                <a target="_blank"
+                  href="https://directorsblog.nih.gov/2017/12/12/helping-people-in-need-of-a-stem-cell-transplant/"
+                  class="stretched-link">Continue reading</a>
               </div>
-              <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                  <div class="col p-4 d-flex flex-column position-static">
-                    <strong class="d-inline-block mb-2 text-success">BLOOD DONATION</strong>
-                    <h3 class="mb-0"></h3>
-                    <div class="mb-1 text-muted">June 13</div>
-                    <p class="mb-auto">Certain myths around blood donation & lack of awareness about the health benefits of blood donation discourage most people from doing this kind of act. So, let us inform you about the amazing health benefits of donating blood through this blog.</p>
-                    <a  class="stretched-link" target="_blank" href="https://www.aimsindia.com/blog/be-a-blood-donor/">Continue reading</a>
-                  </div>
-                  <div class="col-auto d-none d-lg-block">
-                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-          
-                  </div>
-                </div>
+              <div class="col-auto d-none d-lg-block">
+                <img class="bd-placeholder-img" width="200" height="250" style="height:310px"
+                  src="https://thumbs.dreamstime.com/z/information-poster-human-stem-cells-illustration-202685003.jpg"
+                  role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="#55595c"></rect></img>
+
               </div>
-            </div>
-          
-          
-          </main>
-      </section>
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-col">
-            <div class="h-1 bg-gray-200 rounded overflow-hidden">
-              <div class="w-24 h-full bg-indigo-500"></div>
-            </div>
-            <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-              <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Space The Final Frontier</h1>
-              <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Street art subway tile salvia four dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral gochujang bitters dreamcatcher.</p>
             </div>
           </div>
-          <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-            <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-              <div class="rounded-lg h-64 overflow-hidden">
-                <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1203x503">
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-success">BLOOD DONATION</strong>
+                <h3 class="mb-0"></h3>
+                <div class="mb-1 text-muted">June 13</div>
+                <p class="mb-auto">Certain myths around blood donation & lack of awareness about the health benefits of
+                  blood donation discourage most people from doing this kind of act. So, let us inform you about the
+                  amazing health benefits of donating blood through this blog.</p>
+                <a class="stretched-link" target="_blank"
+                  href="https://www.aimsindia.com/blog/be-a-blood-donor/">Continue reading</a>
               </div>
-              <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The LLS Blog</h2>
-              <p class="text-base leading-relaxed mt-2">The LLS Blog is the blog home of the Leukemia and Lymphoma Society, the largest nonprofit dedicated to blood cancer research. They’ve been around since 1949, so they have a wealth of experience and knowledge to offer. On their blog, you can read about the organization’s latest fundraising efforts and events, as well as stories like that of Katie Demasi, a nurse who was diagnosed with Hodgkin’s lymphoma. The touching story chronicles Demasi learning about cancer from both sides of the hospital bed.</p>
-              <a class="text-indigo-500 inline-flex items-center mt-3" target = "_blank" href= "https://www.lls.org/blog">Learn More
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-            <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-              <div class="rounded-lg h-64 overflow-hidden">
-                <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1204x504">
+              <div class="col-auto d-none d-lg-block">
+                <img class="bd-placeholder-img" width="200" height="250"
+                  src="https://image.shutterstock.com/image-vector/blood-donation-vector-illustration-red-260nw-737116375.jpg"
+                  role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="#55595c"></rect></img>
+
               </div>
-              <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The NIH Blog</h2>
-              <p class="text-base leading-relaxed mt-2">In certain people with cancer or other serious diseases, transplants of healthy adult stem cells can be lifesaving. But donating blood-forming stem cells is a bit more complicated than giving blood. For example, stem-cell donors most often undergo five days of injections to build up enough of those vital cells in the blood for donation.
-                Wouldn’t it be great if we could find a way to make the donation process easier? Such improvements are now on the horizon.NIH-funded researchers recently found that, at least in mice, a single injection of two complementary treatments can generate enough stem cells in 15 minutes [1]. 
-              </p>
-              <a class="text-indigo-500 inline-flex items-center mt-3" target = "_blank" href= "https://directorsblog.nih.gov/tag/stem-cell-donation/">Learn More
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-            <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-              <div class="rounded-lg h-64 overflow-hidden">
-                <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1205x505">
-              </div>
-              <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The 400 Blows</h2>
-              <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-              <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
             </div>
           </div>
         </div>
-      </section>
-    </main>
-    <footer class="footer-distributed">
 
-        <div class="footer-left">
-          <h3>Lueke <span>Aware</span></h3>
-    
-          <p class="footer-links">
-            <a href="#">Home</a>
-            |
-            <a href="#">About</a>
-            |
-            <a href="#">Donate</a>
-            |
-            <a href="#">Blog</a>
-          </p>
-    
-          <p class="footer-company-name">Copyright © 2021 <strong>LuekeAware</strong> All rights reserved</p>
+
+      </main>
+    </section>
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        
+        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+          <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+            <div class="rounded-lg h-64 overflow-hidden">
+              <img alt="content" class="object-cover object-center h-full w-full" src="https://www.fredhutch.org/en/news/center-news/2020/05/what-happens-when-cancer-patients-get-covid-19-/_jcr_content/root/responsivegrid/textimage/image.coreimg.jpeg/1590689433710/im6col-200528-cancer-covid19.jpeg">
+            </div>
+            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The LLS Blog</h2>
+            <p class="text-base leading-relaxed mt-2">The LLS Blog is the blog home of the Leukemia and Lymphoma
+              Society, the largest nonprofit dedicated to blood cancer research. They’ve been around since 1949, so they
+              have a wealth of experience and knowledge to offer. On their blog, you can read about the organization’s
+              latest fundraising efforts and events, as well as stories like that of Katie Demasi, a nurse who was
+              diagnosed with Hodgkin’s lymphoma. The touching story chronicles Demasi learning about cancer from both
+              sides of the hospital bed.</p>
+            <a class="text-indigo-500 inline-flex items-center mt-3" target="_blank"
+              href="https://www.lls.org/blog">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+            <div class="rounded-lg h-64 overflow-hidden">
+              <img alt="content" class="object-cover object-center h-full w-full" src="https://i0.wp.com/directorsblog.nih.gov/wp-content/uploads/2021/11/cancer-vaccine2.jpg?resize=1024%2C576&ssl=1">
+            </div>
+            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The NIH Blog</h2>
+            <p class="text-base leading-relaxed mt-2">In certain people with cancer or other serious diseases,
+              transplants of healthy adult stem cells can be lifesaving. But donating blood-forming stem cells is a bit
+              more complicated than giving blood. For example, stem-cell donors most often undergo five days of
+              injections to build up enough of those vital cells in the blood for donation.
+              Wouldn’t it be great if we could find a way to make the donation process easier? Such improvements are now
+              on the horizon.NIH-funded researchers recently found that, at least in mice, a single injection of two
+              complementary treatments can generate enough stem cells in 15 minutes [1].
+            </p>
+            <a class="text-indigo-500 inline-flex items-center mt-3" target="_blank"
+              href="https://directorsblog.nih.gov/tag/stem-cell-donation/">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+            <div class="rounded-lg h-64 overflow-hidden">
+              <img alt="content" class="object-cover object-center h-full w-full" src="{% static 'Blogs/fightcancer.JPG' %}">
+            </div>
+            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Running for My Life: Fighting cancer one step
+              at a time</h2>
+            <p class="text-base leading-relaxed mt-2">I didn't write for a long time because in the height of the
+              pandemic, everything that I was going to say seemed so trite and trivial. As you can see, I did it for a
+              while, and then it was all I could do to concentrate on my paid writing. I was used to doing it out of the
+              house, inspired by the coffee shop noise that due to my newsroom years makes me concentrate better than I
+              do at home. But I'm not complaining, because I was privileged to be able to stay at home.</p>
+            <a class="text-indigo-500 inline-flex items-center mt-3" href="http://runnerwrites.blogspot.com/">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
         </div>
-    
-        <div class="footer-center">
-          <div>
-            <!-- <i class="fa fa-map-marker"></i>
+      </div>
+    </section>
+  </main>
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+      <h3>Lueke <span>Aware</span></h3>
+
+      <p class="footer-links">
+        <a href="#">Home</a>
+        |
+        <a href="#">About</a>
+        |
+        <a href="#">Donate</a>
+        |
+        <a href="#">Blog</a>
+      </p>
+
+      <p class="footer-company-name">Copyright © 2021 <strong>LuekeAware</strong> All rights reserved</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <!-- <i class="fa fa-map-marker"></i>
                     <p><span>Ghaziabad</span>
                         Delhi</p> -->
-          </div>
-    
-          <div>
-            <i class="fa fa-phone"></i>
-            <p>+91 74**9**258</p>
-          </div>
-          <div>
-            <i class="fa fa-envelope"></i>
-            <p><a href="mailto:LuekeAware@gmail.com">LuekeAware@gmail.com</a></p>
-          </div>
-        </div>
-        <div class="footer-right">
-          <p class="footer-company-about">
-            <span>Lorem, ipsum dolor.</span>
-            <strong>Lueke Aware</strong>Lorem ipsum dolor sit, amet consectetur adipisicing.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam in iusto non alias, odio et.
-          </p>
-          <div class="footer-icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-    
-          </div>
-        </div>
-      </footer>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+91 74**9**258</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:LuekeAware@gmail.com">LuekeAware@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>A small step towards deleting Blood Cancer.</span>
+        <strong>Lueke Aware</strong>
+        We campaign for fair access to treatment and to raise awareness of the vital signs and symptoms of a leukaemia diagnosis as well as the most current information on treatment Blogs are available.We also support blood donation camps.
+      </p>
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
