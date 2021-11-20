@@ -36,9 +36,7 @@
         </div>
         <div class="col-lg-6">
           <h1 class="display-5 fw-bold lh-1 mb-3">Responsive left-aligned hero with image</h1>
-          <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
-            popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system,
-            extensive prebuilt components, and powerful JavaScript plugins.</p>
+          <p class="lead">We campaign for fair access to treatment and to raise awareness of the vital signs and symptoms of a leukaemia diagnosis as well as the most current information on treatment Blogs are available.We also support blood donation camps.</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
             <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
@@ -57,7 +55,7 @@
  <div class="d-flex border-bottom">
   <h2 class="pb-2  text-capitalize fw-bolder">The Badges Info </h2>
   <h4 class="pb-2 ms-auto  text-capitalize fw-bolder">
-      <a href="{% url 'tasks' %}" ><i class='bx bxs-right-arrow-circle' ></i></a>
+      <a target="_blank" href="{% url 'tasks' %}" ><i class='bx bxs-right-arrow-circle' ></i></a>
     Explore Badges </h4>
  </div>
 
@@ -247,7 +245,12 @@
   </footer>
 
 
-
+<style>
+.card
+{
+    background-image: url("{% static 'about/avatar.png' %}");
+}
+ </style>
 
 
 

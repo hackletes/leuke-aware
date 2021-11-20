@@ -246,6 +246,10 @@ section{
     text-transform: uppercase;
   }
   @media(max-width:500px){
+    body{
+      overflow-x:hidden; 
+    }
+
     .flip-box-front {
       height: 100%;
       width: 100%;

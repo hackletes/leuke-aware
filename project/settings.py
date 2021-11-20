@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u#2fjho0%)(3)9n#_ver6e!2dm6x%dflw%cxke#*xa)j2r2_%y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['leukeaware.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -120,17 +120,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 # STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR,  'static')
 
+
+
+
+STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR,  'static')
 
 STATICFILES_DIRS = [
         os.path.join(BASE_DIR,'static'),
         ]
 
-STATIC_URL = '/static/'
 
-MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 
 # STATIC_ROOT = os.path.join(BASE_DIR,'static_cdn') # I commented this may nedd to un comment
 # Default primary key field type
@@ -145,3 +148,9 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'leukeaware@gmail.com'
 EMAIL_HOST_PASSWORD = "a!8a8A7#T!,x$&_"
 EMAIL_USE_TLS = True
+
+
+import os
+import django_heroku
+# Activate Django-Heroku.
+django_heroku.settings(locals())
