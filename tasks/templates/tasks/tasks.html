@@ -1911,11 +1911,8 @@
                         </svg>
                     </div>
                     <div class="col-lg-6">
-                        <h1 class="display-5 fw-bold lh-1 mb-3">Lorem ipsum dolor sit amet consectetur.</h1>
-                        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the
-                            world’s most
-                            popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid
-                           .</p>
+                        <h1 class="display-5 fw-bold lh-1 mb-3">Let's Fight Blood Cancer Together!!</h1>
+                        <p class="lead">In order to delete blood cancer, awareness regarding the same carries atmost importance. Complete the following tasks to earn badges and ultimately save lives!!</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
 
                             <a href="#task" class="text-white text-decoration-none">
@@ -1946,13 +1943,13 @@
                       
                           <div class="blog-slider__item swiper-slide">
                             <div class="blog-slider__img">
-                              <img class="img-fluid" src="/assets/img/avatar.png" alt="">
+                              <img class="img-fluid" src="{% static 'SVGs/Badge__LIFESAVER.svg' %}" width="280px" alt="">
                               
                             </div>
                             <div class="blog-slider__content">
-                              <div class="blog-slider__title">Lorem Ipsum Dolor</div>
-                              <div class="blog-slider__text">Lorem ipsum lorem20 dolor sit amet lorem20 consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div>
-                              <a href="#" class="blog-slider__button" id="task1-btn">START</a>
+                              <div class="blog-slider__title">The Life Saver</div>
+                              <div class="blog-slider__text">Donate blood and keep this world Beating!! Blood Donation is the noblest cause, go ahead and register as donor.</div>
+                              <a href="#" class="blog-slider__button" id="task1-btn">Donate Blood!</a>
                                 <br>
                                 <br>
                                 <h3 id="task1-prog">Progress</h3>
@@ -1970,13 +1967,14 @@
                       
                           <div class="blog-slider__item swiper-slide">
                             <div class="blog-slider__img">
-                              <img class="img-fluid" src="/assets/img/avatar.png" alt="">
+                              <img class="img-fluid" src="{% static 'SVGs/Badge__LeukeShare.svg' %}" alt="">
                               
                             </div>
                             <div class="blog-slider__content">
-                              <div class="blog-slider__title">Lorem Ipsum Dolor</div>
-                              <div class="blog-slider__text">Lorem ipsum lorem20 dolor sit amet lorem20 consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div>
-                              <a href="#" class="blog-slider__button">START</a>
+                              <div class="blog-slider__title">Leuke Share</div>
+                              <div class="blog-slider__text">Share your refferal link with your friends and family, lets make them aware.</div>
+                              <a  class="blog-slider__button" onclick="document.getElementById('id01').style.display='block'">START</a>
+                              
                                 <br>
                                 <br>
                                 <h3 id="task2-prog">Progress</h3>
@@ -1999,18 +1997,20 @@
                       
                           <div class="blog-slider__item swiper-slide">
                             <div class="blog-slider__img">
-                              <img class="img-fluid" src="/assets/img/avatar.png" alt="">
+                              <img class="img-fluid" src="{% static 'SVGs/Badge__DKMS.svg' %}" alt="">
                               
                             </div>
                             <div class="blog-slider__content">
                               <div class="blog-slider__title">Lorem Ipsum Dolor</div>
-                              <div class="blog-slider__text">Lorem ipsum lorem20 dolor sit amet lorem20 consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div>
-                              <a href="#" class="blog-slider__button">START</a>
+                              <div class="blog-slider__text">Lorem ipsum lorem20 dolor sit 
+                                                        amet lorem20 consectetur, 
+                                                        adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div>
+                              <a href="https://www.dkms-bmst.org/" target="_blank" class="blog-slider__button">START</a>
                                 <br>
                                 <br>
-                                <h3>Progress</h3>
+                                <h3>Progress: 0/1</h3>
                             
-                                <progress max="100" value="70"></progress>
+                                <progress max="100" value="2"></progress>
                               </div>
                             </div>
                           </div>                        
@@ -2028,7 +2028,7 @@
 
 
 
-
+<!-- 
     <footer class="footer-distributed">
         <div class="footer-left">
             <h3>Lueke <span>Aware</span></h3>
@@ -2047,11 +2047,11 @@
 
         <div class="footer-center">
             <div>
-                <!-- <i class="fa fa-map-marker"></i>
+                < <i class="fa fa-map-marker"></i>
                 <p><span>Ghaziabad</span>
                     Delhi</p> -->
-            </div>
-
+            <!-- </div> -->
+<!-- 
             <div>
                 <i class="fa fa-phone"></i>
                 <p>+91 74**9**258</p>
@@ -2075,8 +2075,113 @@
 
             </div>
         </div>
-    </footer>
+    </footer>  -->
+    <style>
+        .footer{
+    background:black;
+    text-align: center;
+}
 
+.footer .share{
+    padding:1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color:#fff;
+    border:.1rem solid rgba(255,255,255,.3);
+    margin:.3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background-color: black;
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap:1rem;
+}
+
+.footer .links a{
+    padding:.7rem 2rem;
+    color:#fff;
+    border:.1rem solid rgba(255,255,255,.3);
+    font-size: 2rem;
+}
+
+.footer .links a:hover{
+    background:black;
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color:#fff;
+    font-weight: lighter;
+    padding:1.5rem;
+}
+
+.footer .credit span{
+    color:black;
+}
+.bottom center{
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: #1d1b31;
+  }
+  .bottom center span{
+    color: white;
+  }
+  .bottom center a{
+    color: rgb(220, 190, 20);
+    text-decoration: none;
+  }
+  .bottom center a:hover{
+    text-decoration: underline;
+  }
+
+.footer .footer-line{
+    color: white;
+    font-size: 2rem;
+}
+
+
+  /* footer bottom styling */
+  .bottom center{
+    padding: 10px;
+    font-size: 2rem;
+    background: black;
+  }
+  .bottom center span{
+    color: white;
+  }
+  .bottom center a{
+    color: rgb(220, 190, 20);
+    text-decoration: none;
+  }
+  .bottom center a:hover{
+    text-decoration: underline;
+  }
+
+.footer .footer-line{
+    color: white;
+    font-size: 2rem;
+}
+    </style>
+
+    <div class="bottom">
+        <center>
+            <span class="credit">Developed with ❤️ By Team HACKLETES | <a> LEUKE-AWARE</a></span><br>
+            <br>
+            <span class="far fa-copyright"></span><span>2021 All rights reserved.</span>
+        </center>
+    </div>
 
 
 
@@ -2109,6 +2214,8 @@
             document.getElementById("task2-prog").innerHTML = `Progress: ${count}/5`;
 
         </script>
+
+        {% include 'tasks/popup.html' %}
 </body>
 
 </html>

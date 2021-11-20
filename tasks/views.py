@@ -18,3 +18,6 @@ def tasks(request):
     context = {'ref_code': profile.code, 'rec_count': rec_count, 'donated':donated}
 
     return render(request, 'tasks/tasks.html', context)
+
+def popup(request):
+    return render(request,"tasks/popup.html")

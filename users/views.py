@@ -95,8 +95,8 @@ def signup(request):
                             current_user_profile.save()
                         auth.login(request, user)
                         send_mail(
-                                    'thanku',
-                                    'signup succesfull',
+                                    ['Hello {} — thank you for signing up!'.format(user.first_name)],
+                                    'Signup Succesfull, We are glad that you joined us.Explore the site and if possiible please register as a donor or any urgent requirement of blood please fill the reciver form we will help you out at our best.Thank you.',
                                     'leukeaware@gmail.com',
                                     ['{}'.format(user.email)],
                                     fail_silently=False,
@@ -145,8 +145,8 @@ def Donars(request):
             messages.success(
                         request, f'Your data is saved')
             send_mail(
-                        'thanku',
-                        'you are a donor know',
+                        'Thanks for connecting with us!',
+                        'Thank you for donating blood. You have played a very important role in our mission to save lives. Is it going too far to say you are a hero? We don’t think it is! So wear your invisible cape with pride, and start perfecting your catchphrase.We appreciate your efforts. The world needs more heroes like you! ',
                         'leukeaware@gmail.com',
                         ['{}'.format(request.user.email)],
                         fail_silently=False,

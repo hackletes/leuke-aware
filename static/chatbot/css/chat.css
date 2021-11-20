@@ -45,7 +45,7 @@
 }
 
 .outer-container {
-    min-height: 500px;
+    min-height: 450px !important;
     bottom: 0%;
     position: relative;
 }

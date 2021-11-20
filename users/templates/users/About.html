@@ -55,7 +55,7 @@
  <div class="d-flex border-bottom">
   <h2 class="pb-2  text-capitalize fw-bolder">The Badges Info </h2>
   <h4 class="pb-2 ms-auto  text-capitalize fw-bolder">
-      <a target="_blank" href="{% url 'tasks' %}" ><i class='bx bxs-right-arrow-circle' ></i></a>
+      <a  href="{% url 'tasks' %}" ><i class='bx bxs-right-arrow-circle' ></i></a>
     Explore Badges </h4>
  </div>
 
@@ -65,16 +65,16 @@
           style="background-image: url('unsplash-photo-1.jpg'); background-color: #F48C06;;">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
 
-
+            <img class="img-fluid" src="{% static 'SVGs/Badge__LeukeShare.svg' %}" width="280px" alt="">
           </div>
         </div>
       </div>
 
       <div class="col badge__card">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-success rounded-5 shadow-lg"
-          style="background-image: url('unsplash-photo-2.jpg');">
+        <div class="card card-cover h-100 overflow-hidden text-white  rounded-5 shadow-lg"
+          style="background-image: url('unsplash-photo-2.jpg'); background-color:#333333;">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-
+            <img class="img-fluid" src="{% static 'SVGs/Badge__LIFESAVER.svg' %}" width="280px" alt="">
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@
         <div class="card card-cover h-100 overflow-hidden text-white bg-danger rounded-5 shadow-lg"
           style="background-image: url('unsplash-photo-3.jpg');">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-            
+            <img class="img-fluid" src="{% static 'SVGs/Badge__DKMS.svg' %}" width="280px" alt="">
             </ul>
           </div>
         </div>
@@ -103,10 +103,10 @@
   <div class="container-fluid  d-flex justify-content-center align-content-center flex-wrap  mt-4 pt-2">
     <div class="wrapper">
       <div class="card front-face">
-        <img src="../assets/img/ug-10.jpg">
+        <img src="{% static 'About/avatars/nikita_dp.jpg' %}">
       </div>
       <div class="card back-face">
-        <img src="../assets/img/ug-10.jpg">
+        <img src="{% static 'About/avatars/nikita.png' %}">
         <div class="info">
           <div class="title">
             Nikita Karande
@@ -147,10 +147,10 @@
     </div>
     <div class="wrapper">
       <div class="card front-face">
-        <img src="../assets/img/ug-8.jpg">
+        <img src="{% static 'About/avatars/devraj_dp.jpg' %}">
       </div>
       <div class="card back-face">
-        <img src="../assets/img/ug-8.jpg">
+        <img src="{% static 'About/avatars/devraj.png' %}">
         <div class="info">
           <div class="title">
             Devraj Shetake
@@ -160,9 +160,9 @@
         </div>
         <ul>
 
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/devraj-shetake-439606206/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/devrajshetake/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/devrajshetake" target="_blank"><i class="fab fa-github"></i></a>
         </ul>
       </div>
     </div>
